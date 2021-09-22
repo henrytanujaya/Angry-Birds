@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Owl.cs" />
+     <Compile Include="Assets\Scripts\Restart.cs" />
      <Compile Include="Assets\Scripts\SlingShooter.cs" />
      <Compile Include="Assets\Scripts\TrailController.cs" />
      <Compile Include="Assets\Scripts\YellowBird.cs" />

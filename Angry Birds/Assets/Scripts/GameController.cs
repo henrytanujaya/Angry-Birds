@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -12,6 +14,10 @@ public class GameController : MonoBehaviour
     public TrailController TrailController;
     private Bird _shotBird;
     public BoxCollider2D TapCollider;
+
+    public string level;
+    [SerializeField] private GameObject _panel;
+    [SerializeField] private Text _statusInfo;
 
     // Start is called before the first frame update
     void Start()
@@ -43,15 +49,27 @@ public class GameController : MonoBehaviour
         TapCollider.enabled = false;
         if (_isGameEnded)
         {
-            return;
+            _statusInfo.text = "You Win!";
+            _panel.gameObject.SetActive(true);
         }
 
         Birds.RemoveAt(0);
+
+        if (Birds.Count == 0 && Enemies.Count > 0)
+        {
+            _statusInfo.text = "You Lose!";
+            _panel.gameObject.SetActive(true);
+        }
 
         if(Birds.Count > 0)
         {
             SlingShooter.InitiateBird(Birds[0]);
             _shotBird = Birds[0];
+        }
+
+        else
+        {
+            _isGameEnded = true;
         }
     }
 
