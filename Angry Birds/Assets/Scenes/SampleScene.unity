@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 339172840}
   - component: {fileID: 339172843}
   m_Layer: 0
-  m_Name: RedBird (2)
+  m_Name: Owl
   m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,7 +220,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 8d65fab5aa828d7439359b962c57d921, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d20e3fb65723114693388b7b8c277c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -240,12 +240,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 339172838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61d17b8f56f8b6047b7cb84c00a0a423, type: 3}
+  m_Script: {fileID: 11500000, guid: 3746b7bb477df2f48bbeecf30d086bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Parent: {fileID: 1462107820}
   RigidBody: {fileID: 339172841}
   Collider: {fileID: 339172840}
+  isExplode: 0
+  EFX: {fileID: 100008, guid: a650464734b6f9d4bab62fff97151214, type: 3}
+  Impact: 5
+  LayerToHit:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  force: 50
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +688,7 @@ GameObject:
   - component: {fileID: 1367045998}
   - component: {fileID: 1367046002}
   m_Layer: 0
-  m_Name: RedBird (1)
+  m_Name: RedBird
   m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
